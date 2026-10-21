@@ -1,0 +1,3 @@
+# The agent is intentionally dependency-free — it only uses the
+# Python 3 standard library (socket, threading, argparse).
+# This file is kept for convention/documentation purposes.

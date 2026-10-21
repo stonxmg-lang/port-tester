@@ -1,0 +1,36 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  border: 1px solid currentColor;
+}
+
+.glyph {
+  font-size: 14px;
+}
+
+.ok {
+  color: var(--ok);
+  background: color-mix(in srgb, var(--ok) 10%, transparent);
+}
+
+.err {
+  color: var(--err);
+  background: color-mix(in srgb, var(--err) 10%, transparent);
+}
+
+.warn {
+  color: var(--warn);
+  background: color-mix(in srgb, var(--warn) 10%, transparent);
+}
+
+.neutral {
+  color: var(--neutral);
+  background: color-mix(in srgb, var(--neutral) 10%, transparent);
+}

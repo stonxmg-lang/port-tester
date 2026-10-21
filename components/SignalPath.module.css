@@ -1,0 +1,81 @@
+.wrap {
+  width: 100%;
+  padding: 28px 6px 10px;
+}
+
+.track {
+  position: relative;
+  height: 2px;
+  background: var(--hairline);
+  border-radius: 2px;
+  display: flex;
+}
+
+.segment {
+  flex: 1;
+  height: 100%;
+  background: var(--hairline);
+}
+
+.track.testing .segment {
+  background: var(--accent-dim);
+}
+
+.track.success .segment {
+  background: var(--ok);
+}
+
+.track.fail .segment {
+  background: var(--err);
+}
+
+.track.unknown .segment {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--neutral) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px 2px var(--accent);
+  animation: travel 1.4s ease-in-out infinite;
+}
+
+.pulse[data-protocol="udp"] {
+  animation-duration: 1s;
+  animation-timing-function: steps(6, end);
+}
+
+@keyframes travel {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.nodes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.node {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
