@@ -163,7 +163,7 @@ export default function Page() {
           <input
             id="host"
             className="mono"
-            placeholder={publicIp ?? "89.147.157.190"}
+            placeholder={publicIp ?? ""}
             value={host}
             onChange={(e) => setHost(e.target.value)}
             disabled={loading}
